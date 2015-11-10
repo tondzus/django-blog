@@ -1,0 +1,19 @@
+.header {
+    padding: 1em 0em;
+    color: white;
+    background-color: black;
+}
+
+.right {
+    display: block;
+    text-align: right;
+}
+
+.main-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+footer {
+    color: grey;
+}

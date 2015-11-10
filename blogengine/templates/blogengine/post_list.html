@@ -1,0 +1,12 @@
+{% extends "blogengine/blog_base.html" %}
+{% load markdown_filter %}
+
+{% block content %}
+    {% for post in post_list %}
+    <article>
+        <h4 class="text-primary"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+        <span class="text-info right">posted on {{ post.posted|date:"Y-m-d \a\t H:i" }}</span>
+        <div>{{ post.body|markdownify|safe }}</div>
+    </article>
+    {% endfor %}
+{% endblock content %}

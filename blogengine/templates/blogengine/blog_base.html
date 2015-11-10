@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>dev some blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'blogengine/main-style.css' %}" />
+</head>
+<body class="container">
+    <div class="row header">
+        <header class="col-md-12">
+            <h1>dev some blog</h1>
+            <div id="blog-description">another programmer have one...</div>
+        </header>
+    </div>
+    <div class="row main-container">
+        <section class="col-md-5 col-md-offset-2">
+            {% block content %}
+            {% endblock %}
+        </section>
+        <aside class="col-md-3">
+            <h3>Tomáš Štibraný</h3>
+            <div>
+                <p>I studied AI on <a href="http://www.fmph.uniba.sk/">MatFyz</a>. Now I code for money.</p>
+                <p>My professional interests include machine learning, interesting web services and game development.</p>
+                <p>Feel free to <a href="mailto:tms.stibrany@gmail.com?Subject=Work%20offer">email me</a> with job offers ;)</p>
+            </div>
+        </aside>
+    </div>
+    <div class="row">
+        <footer class="col-md-12">
+            <p>© Tomáš Štibraný 2015</p>
+        </footer>
+    </div>
+</body>
+</html>
